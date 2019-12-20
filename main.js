@@ -62,7 +62,9 @@ function dibujar(txt, classTick) {
         div.classList.add('div');
 
         newItem = document.createElement("li");
-        let contenido = document.createTextNode(txt);
+        let contenido = document.createElement('p');
+        contenido.classList.add('txt-nota');
+        let text = document.createTextNode(txt);
 
         let btnMarcar = document.createElement("button");
         btnMarcar.classList.add('marcar');
@@ -79,6 +81,7 @@ function dibujar(txt, classTick) {
         btnMarcar.appendChild(tick);
         btnBorrar.appendChild(equis);
 
+        contenido.appendChild(text);
         newItem.appendChild(contenido);
         div.appendChild(btnBorrar);
         div.appendChild(btnMarcar);

@@ -173,6 +173,11 @@ li {
     top: 10px;
 }
 
+.txt-nota {
+    width: 80%;
+    display: inline-block;
+}
+
 @media (min-width: 700px) {
     * {
         font-size: 20px;
