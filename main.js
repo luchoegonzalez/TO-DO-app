@@ -24,7 +24,8 @@ agregar.addEventListener('click', addTarea);
 function addTarea () {
     texto = input.value;
     
-    if (!texto) {
+    if (!texto || texto.trim() == '') {
+        input.value = null;
         agregar.classList.add('error-boton');
         add.classList.add('error-boton');
         input.placeholder = "Por favor añade una tarea...";
@@ -43,14 +44,12 @@ function addTarea () {
 window.addEventListener('load', cargar);
 function cargar () {
     tareas.forEach((tarea) => {
-        console.log(tarea);
         dibujar(tarea, 'null');
         lista.insertBefore(newItem, lista.childNodes[0]);
     })
 
     completadas.forEach((completa) => {
         dibujar(completa, 'tickeado');
-        console.log(completa);
         hecho.insertBefore(newItem, hecho.childNodes[0]);
         newItem.classList.add('marcado');
     })
@@ -90,43 +89,6 @@ function dibujar(txt, classTick) {
         btnMarcar.addEventListener("click", marcarTarea);
         btnBorrar.addEventListener("click", borrarTarea);
 }
-
-//     datos.todo.forEach ((_tarea) => 
-//         console.log(_tarea)
-//     );
-
-//     for(i = 0; i < datos.todo.length; i++) {
-//         let tarea = JSON.stringify(datos.todo[i]);
-
-//         let div = document.createElement('div');
-//         div.classList.add('div');
-
-//         newItem = document.createElement("li");
-//         let localtxt = document.createTextNode(tarea);
-
-//         let btnMarcar = document.createElement("button");
-//         btnMarcar.classList.add('marcar');
-
-//         let btnBorrar = document.createElement("button");
-//         btnBorrar.classList.add('borrar');
-
-//         let tick = document.createElement('i');
-//         tick.classList.add('icon-ok');
-//         let equis = document.createElement('i');
-//         equis.classList.add('icon-cancel');
-
-//         newItem.appendChild(localtxt);
-//         div.appendChild(btnBorrar);
-//         div.appendChild(btnMarcar);
-//         newItem.appendChild(div);
-//         lista.appendChild(newItem);
-//         btnMarcar.appendChild(tick);
-//         btnBorrar.appendChild(equis);
-
-//         btnMarcar.addEventListener("click", marcarTarea);
-//         btnBorrar.addEventListener("click", borrarTarea);
-//     }
-//     }
 
 input.addEventListener("click", check);
 function check () {
