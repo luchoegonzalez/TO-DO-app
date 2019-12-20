@@ -5,9 +5,19 @@ var newItem;
 const hecho = document.querySelector('.hecho');
 var vacio = false;
 const add = document.querySelector('.add');
-var tareas = JSON.parse(localStorage.getItem('tareas'));
-var completadas = JSON.parse(localStorage.getItem('completado'));
 var texto;
+var tareas;
+var completadas;
+if (localStorage.getItem('tareas') == null) {
+    tareas = [];
+} else {
+    tareas = JSON.parse(localStorage.getItem('tareas'));
+};
+if (localStorage.getItem('completado') == null) {
+    completadas = [];
+} else {
+    completadas = JSON.parse(localStorage.getItem('completado'));
+};
 
 agregar.addEventListener('click', addTarea);
 
