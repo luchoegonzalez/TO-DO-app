@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+.boton {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    color: #2b2726;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: absolute;
+    right: 10px;
+    outline: none;
+}
+
+.icon-plus {
+    font-size: 25px;
+}
+
+.input {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    padding: 20px;
+    border: none;
+    background: #eaeaea;
+    transition: all 0.1s;
+    outline: none;
+}
+
+.input:focus {
+    box-shadow: 0px 5px 30px -10px rgba(0,0,0,0.75);
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(187, 187, 187, 0.603);
+}
+
+.lista, .hecho {
+    width: 100%;
+}
+
+.lista {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+li {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0px 5px 40px -20px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+
+.div {
+    display: flex;
+}
+
+.add {
+    width: 100%;
+    display: flex;
+    padding: 15px 10px;
+    margin-bottom: 30px;
+    position: relative;
+    background: #2b2726;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: auto;
+    width: 98%;
+}
+
+.cont-tareas {
+    width: 100%;
+}
+
+.null {
+    opacity: 100%;
+}
+
+.marcar, .borrar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background 0.3s;
+    background: none;
+    margin-right: 10px;
+}
+
+.icon-cancel, .icon-ok {
+    font-size: 25px;
+    line-height: 0px;
+}
+
+.marcar {
+    color: #30e3ca;
+    border: 2px solid #30e3ca;
+    outline: none;
+}
+
+.borrar {
+    color: #ff5959;
+    border: 2px solid #ff5959;
+    outline: none;
+}
+
+.borrar:hover {
+    background: #ff5959;
+    color: white;
+}
+
+.marcado {
+    text-decoration:line-through;
+}
+
+.tickeado {
+    background: #30e3ca;
+    color: white;
+}
+
+.hecho {
+    width: 100%;
+    border-top: 2px solid black;
+    padding-top: 20px;
+}
+
+.error {
+    border: 3px solid #ff5959;
+    background: #eaeaea;
+}
+
+.error-boton {
+    background: #ff5959;
+}
+
+.error-boton:hover {
+    background: #ff5959;
+}
+
+.empty {
+    text-align: center;
+    color: #dbdbdb;
+    position: absolute;
+    z-index: -1;
+    left: 1%;
+    right: 1%;
+    top: 10px;
+}
+
+@media (min-width: 700px) {
+    * {
+        font-size: 20px;
+    }
+    .boton:hover {
+        color: #2b2726;
+        background: white;
+        box-shadow: 0px 5px 60px -15px rgba(0,0,0,0.75);
+    }
+    .marcar:hover {
+        background: #30e3ca;
+        color: white;
+    }
+    .error-boton:hover {
+        background: #ff5959;
+    }
+}
